@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/prefer-default-export
 const awsXRay = require('aws-xray-sdk');
-// const AWS = awsXRay.captureAWS(require('aws-sdk'));
+const AWS = awsXRay.captureAWS(require('aws-sdk'));
 
 function getData(id) {
   // return new Promise((resolve, reject) => {
