@@ -13,11 +13,11 @@ provider:
   tracing: true # X-Rayでのトレースを有効にする
 
 functions:
-  apiGet:
-    handler: api.get
+  apiPost:
+    handler: api.post
     events:
       - http:
-          method: get
+          method: post
           path: api
   second:
     handler: second.hello

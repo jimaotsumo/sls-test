@@ -21,7 +21,8 @@ function getData(id) {
 
 
 module.exports.get = (event, context, callback) => {
-  getData(event.pathParameters.id).then((data) => {
+  const body = JSON.parse(event.body)
+  getData(body).then((data) => {
     const response = {
       statusCode: 200,
       body: JSON.stringify({
